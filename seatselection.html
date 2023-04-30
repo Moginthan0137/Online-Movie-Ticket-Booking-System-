@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>SEAT SELECTION</title>
+<style>
+body {
+background-color: #242333;
+color: #fff;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+font-family: 'Lato', sans-serif;
+margin: 0;
+}
+.movie-container {
+margin: 20px 0;
+}
+.movie-container select {
+background-color: #fff;
+border: 0;
+border-radius: 5px;
+font-size: 14px;
+margin-left: 10px;
+padding: 5px 15px 5px 15px;
+}
+.container {
+width: 55%;
+height: 70%;
+perspective: 1000px;
+margin-bottom: 30px;
+}
+.seat {
+background-color: #444451;
+height: 22px;
+width: 25px;
+margin-top: 15px;
+margin-left: 10px;
+border-radius: 10px;
+}
+.seat.selected {
+background-color: skyblue;
+}
+.seat.occupied {
+background-color: #fff;
+}
+.option{
+background-color: #444451;
+height: 22px;
+width: 25px;
+margin-left: 10px;
+border-radius: 10px;
+}
+.option.selected {
+background-color: #6feaf6;
+}
+.option.occupied {
+background-color: #fff;
+}
+.seat:nth-of-type(3) {
+margin-right: 18px;
+}
+.seat:nth-last-of-type(3) {
+margin-left: 18px;
+}
+.seat:not(.occupied):hover {
+cursor: pointer;
+transform: scale(1.2);
+}
+.showcase .seat:not(.occupied):hover {
+cursor: default;
+transform: scale(1);
+}
+.showcase {
+background: rgba(0, 0, 0, 0.1);
+padding: 5px 10px;
+border-radius: 5px;
+color: #777;
+list-style-type: none;
+display: flex;
+justify-content: space-between;
+}
+.showcase li {
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 0 10px;
+}
+.showcase li small {
+margin-left: 2px;
+}
+.row {
+display: flex;
+}
+.screen {
+background-color: #fff;
+height: 70px;
+width: 100%;
+margin: 15px 0;
+transform: rotateX(-45deg);
+box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+}
+p.text {
+margin: 5px 0;
+}
+p.text span {
+color: #6feaf6;
+}
+.seat.one{
+margin-left: 20px;
+}
+</style>
+</head>
+<body>
+<ul class="showcase">
+<li>
+<div class="option"></div>
+<small>N/A</small>
+</li>
+<li>
+<div class="option selected"></div>
+<small>Selected</small>
+</li>
+<li>
+<div class="option occupied"></div>
+<small>Occupied</small>
+</li>
+</ul>
+<div class="container">
+<div class="screen"></div>
+<div class="row">
+<div class="seat one"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat occupied"></div>
+<div class="seat occupied"></div>
+<div class="seat occupied"></div>
+<div class="seat occupied"></div>
+<div class="seat occupied"></div>
+<div class="seat occupied"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+</div>
+<div class="row">
+<div class="seat one"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat occupied"></div>
+<div class="seat occupied"></div>
+<div class="seat occupied"></div>
+<div class="seat occupied"></div>
+<div class="seat occupied"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+</div>
+<div class="row">
+<div class="seat one"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat occupied"></div>
+<div class="seat occupied"></div>
+<div class="seat occupied"></div>
+<div class="seat occupied"></div>
+<div class="seat occupied"></div>
+</div>
+<div class="row">
+<div class="seat one"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat occupied"></div>
+<div class="seat occupied"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+</div>
+<div class="row">
+<div class="seat one"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+</div>
+<div class="row">
+<div class="seat one"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat occupied"></div>
+<div class="seat occupied"></div>
+</div>
+<div class="row">
+<div class="seat one"></div>
+<div class="seat"></div>
+<div class="seat occupied"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat occupied"></div>
+<div class="seat"></div>
+<div class="seat occupied"></div>
+<div class="seat"></div>
+<div class="seat occupied"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+</div>
+<div class="row">
+<div class="seat one"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat occupied"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat occupied"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+</div>
+<div class="row">
+<div class="seat one"></div>
+<div class="seat occupied"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat occupied"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+</div>
+<div class="row">
+<div class="seat one"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat occupied"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat occupied"></div>
+<div class="seat occupied"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat occupied"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat occupied"></div>
+</div>
+<div class="row">
+<div class="seat one"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat occupied"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat occupied"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat"></div>
+<div class="seat occupied"></div>
+<div class="seat occupied"></div>
+<div class="seat occupied"></div>
+<div class="seat"></div>
+</div>
+</div>
+<p class="text">
+<br>You have selected <span id="count">0</span> seats for a price of Rs <span id="total">0</span>
+</p>
+</body>
+</html>
